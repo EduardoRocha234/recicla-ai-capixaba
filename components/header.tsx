@@ -15,7 +15,7 @@ export function Header() {
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
             <span className="text-lg font-bold text-primary-foreground">RC</span>
           </div>
-          <span className="text-xl font-bold text-foreground">Recicla Capixaba</span>
+          <span className="text-xl font-bold text-foreground">Recicla Ai, Capixaba!</span>
         </Link>
 
         {/* Desktop Navigation */}
