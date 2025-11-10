@@ -8,9 +8,9 @@ const _geist = Geist({subsets: ['latin']})
 const _geistMono = Geist_Mono({subsets: ['latin']})
 
 export const metadata: Metadata = {
-	title: 'Recicla Capixaba - Transformando Vidas através da Reciclagem',
+	title: 'Recicla Ai, Capixaba! - Transformando Vidas através da Reciclagem',
 	description:
-		'ONG de reciclagem que empodera catadores através da economia solidária no Espírito Santo',
+		'Ação de reciclagem que empodera catadores através da economia solidária no Espírito Santo',
 	generator: 'v0.app',
 }
 
