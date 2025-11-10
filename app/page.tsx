@@ -1,6 +1,5 @@
 import {Header} from '@/components/header'
 import {Footer} from '@/components/footer'
-import {Button} from '@/components/ui/button'
 import {
 	Card,
 	CardContent,
@@ -8,7 +7,6 @@ import {
 	CardHeader,
 	CardTitle,
 } from '@/components/ui/card'
-import {Badge} from '@/components/ui/badge'
 import {Separator} from '@/components/ui/separator'
 import {
 	Recycle,
@@ -19,168 +17,89 @@ import {
 	XCircle,
 	Lightbulb,
 	TrendingUp,
-	Award,
 	HandHeart,
 	Wine,
+	Utensils,
+	NotebookText,
+	Smartphone,
+	Pizza,
+	Scroll,
+	Syringe,
+	Dog,
+	ExternalLink,
 } from 'lucide-react'
-import Link from 'next/link'
 
 export default function HomePage() {
 	return (
 		<div className="flex min-h-screen flex-col">
 			<Header />
-
-			<main className="flex-1">
-				{/* Hero Section */}
-				<div className="min-h-screen w-full bg-[#f8fafc] relative">
-					{/* Top Fade Grid Background */}
-					<div
-						className="absolute inset-0 z-0"
-						style={{
-							backgroundImage: `
-        linear-gradient(to right, #e2e8f0 1px, transparent 1px),
-        linear-gradient(to bottom, #e2e8f0 1px, transparent 1px)
-      `,
-							backgroundSize: '20px 30px',
-							WebkitMaskImage:
-								'radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)',
-							maskImage:
-								'radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)',
-						}}
-					/>
-					<section className="relative overflow-hidden px-8 py-20 text-primary-foreground md:py-32 h-200">
-						<div className="absolute left-[2%] space-y-2 px-14">
-							<div className="relative space-y-2 text-focus-in">
-								<h1 className="text-primary text-7xl font-bold tracking-tight">
-									Transforme seu lixo
-								</h1>
-								<h2 className="pl-24 text-primary text-7xl  tracking-tight">
-									em atitude sustentável
-								</h2>
-								<p className="absolute -right-[40%] top-16 mb-8 text-primary text-md text-lg md:text-xl w-1/3">
-									Cuidar do planeta começa com escolhas diárias. A gente te
-									mostra como fazer isso de forma simples.
-								</p>
-							</div>
-						</div>
-						<img
-							className="absolute top-[42%] object-cover w-64 rounded-xl h-40   slide-top"
-							src="catadores-trabalhando-com-reciclagem--pessoas-sepa.jpg"
-						></img>
-						{/* <div className="absolute bottom-[2%] left-[9%] flex flex-col items-center gap-2">
-							<img
-								src="/recicla_ai_capixaba_logo.png"
-								className="object-cover size-20 rounded-full object-center"
-							/>
-							<span className="text-4xl text-primary">+</span>
-							<img
-								src="/logo-recicla-capixaba.png"
-								className="object-cover size-24 rounded-full border object-center"
-							/>
-						</div> */}
-						<div className="flex gap-6 absolute bottom-[3%] left-[25%] ">
-							<img
-								className="w-xl rounded-xl h-80 object-cover   slide-top"
-								src="/recycling-workers-sorting-materials.jpg"
-							></img>
-							<div className="flex flex-col gap-4">
-								<img
-									className="w-[16rem] rounded-xl h-36 object-cover object-center   slide-top"
-									src="/male-recycling-worker-with-truck.jpg"
-								></img>
-								<span className="text-primary w-[16rem] ml-10">
-									O Recicla Aí, Capixaba! apoia a Recicla Capixaba levando
-									informação clara sobre reciclagem e descarte correto.
-								</span>
-								<div className="mt-4 flex flex-col gap-4 sm:flex-row sm:justify-center">
-									<button className="px-4 py-2 rounded-md bg-primary text-white hover:bg-primary/80">
-										<Link href="#como-reciclar">Aprenda a Reciclar</Link>
-									</button>
-									<button className="px-4 py-2 rounded-md border text-slate-600 ">
-										<Link href="#sobre">Conheça o Projeto</Link>
-									</button>
-								</div>
-							</div>
-						</div>
-					</section>
-				</div>
-
-				{/* <div className="relative z-10">
-						<div className="mx-auto max-w-3xl text-center ">
-							<h1 className="mb-6 text-primary text-4xl font-bold tracking-tight md:text-6xl bg-primary-foreground/50">
+			<main className="flex-1 z-10">
+				<section className="overflow-hidden  py-20 text-primary-foreground md:py-32">
+					<div className="z-10">
+						<div className="mx-auto max-w-3xl lg:max-w-4xl text-primary text-center flex flex-col items-center justify-center text-focus-in px-8">
+							<h1 className="mb-6 text-balance text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl">
 								Transforme seu lixo em atitude sustentável
 							</h1>
-							<p className="mb-8 text-pretty text-lg text-primary-foreground/90 leading-relaxed md:text-xl">
+							<span className="mb-8 text-center text-primary  text-md md:w-md leading-relaxed md:text-xl">
 								Cuidar do planeta começa com escolhas diárias. A gente te mostra
 								como fazer isso de forma simples.
-							</p>
+							</span>
 							<div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-								<Button
-									size="lg"
-									asChild
-									className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
+								<a
+									className="px-4 py-2 bg-primary text-white rounded-md  hover:bg-primary/80"
+									href="#como-reciclar"
 								>
-									<Link href="#como-reciclar">Aprenda a Reciclar</Link>
-								</Button>
-								<Button
-									size="lg"
-									variant="outline"
-									asChild
-									className="border-primary-foreground/20 bg-transparent text-primary-foreground hover:bg-primary-foreground/10"
+									Aprenda a Reciclar
+								</a>
+								<a
+									className="px-4 py-2 border border-primary text-primary rounded-md backdrop-blur bg-background/95"
+									href="#sobre"
 								>
-									<Link href="#sobre">Conheça o Projeto</Link>
-								</Button>
-							</div>
-						</div>
-					</div> */}
-				{/* <div className="absolute inset-0 bg-[url('/recycling-workers-sorting-materials.jpg')] bg-cover bg-center" /> */}
-
-				{/* Stats Section */}
-				{/* <section className="border-b border-border bg-muted/30 py-12">
-					<div className="">
-						<div className="grid gap-8 md:grid-cols-3">
-							<div className="text-center">
-								<div className="mb-2 text-4xl font-bold text-primary">16</div>
-								<div className="text-sm text-muted-foreground">
-									Famílias Associadas
-								</div>
-							</div>
-							<div className="text-center">
-								<div className="mb-2 text-4xl font-bold text-primary">70+</div>
-								<div className="text-sm text-muted-foreground">
-									Toneladas/Mês
-								</div>
-							</div>
-							<div className="text-center">
-								<div className="mb-2 text-4xl font-bold text-primary">5+</div>
-								<div className="text-sm text-muted-foreground">
-									Anos de Impacto
-								</div>
+									Conheça o Projeto
+								</a>
 							</div>
 						</div>
 					</div>
-				</section> */}
+				</section>
 
-				{/* About Section */}
 				<section
 					id="sobre"
 					className="py-20 px-8 mt-10"
 				>
-					<div className="">
+					<div className="z-10">
 						<div className="mx-auto max-w-3xl text-center">
-							<h2 className="mb-6 text-primary text-3xl font-bold tracking-tight md:text-4xl">
-								Sobre a Recicla Capixaba
+							<h2 className="mb-6 text-primary text-3xl font-bold tracking-tight md:text-4xl z-50">
+								Sobre o Projeto
 							</h2>
 							<p className="mb-8 text-pretty text-muted-foreground leading-relaxed">
-								Fundada em 2019 por Marialva e Zé Carlos, a Recicla Capixaba
-								nasceu da necessidade de criar oportunidades para pessoas que
-								sofrem discriminação no mercado de trabalho. Localizada no
-								bairro Consolação em Vitória-ES, operamos como uma associação de
-								economia solidária onde todos são donos do próprio negócio.
+								A ação{' '}
+								<strong className="text-primary">
+									“Recicla Aí, Capixaba!”
+								</strong>{' '}
+								tem como propósito ajudar a instituição{' '}
+								<strong className="text-primary">“Recicla Capixaba”</strong> a
+								promover a educação ambiental e incentivar mudanças de
+								comportamento em relação à coleta, reciclagem e descarte
+								adequado dos resíduos. O principal objetivo é conectar as
+								pessoas, comunidades e instituições para construirmos uma
+								sociedade mais limpa, sustentável e responsável.
+							</p>
+							<p className="mb-8 text-pretty text-muted-foreground leading-relaxed">
+								Através de informações acessíveis na internet buscamos despertar
+								a consciência da sociedade sobre o impacto do lixo no meio
+								ambiente e mostrar que pequenas atitudes, como separar o lixo
+								corretamente, diminuir o consumo de plásticos e reutilizar
+								materiais podem trazer diversos benefícios à natureza e para o
+								futuro do estado.
 							</p>
 						</div>
 
-						<div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+						<div className="mx-auto text-center mt-16 ">
+							<h2 className="mb-6 text-primary text-3xl font-bold tracking-tight z-50">
+								A Recicla Capixaba Transforma
+							</h2>
+						</div>
+						<div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
 							<Card className="border-border">
 								<CardHeader>
 									<div className="mb-2 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
@@ -279,51 +198,85 @@ export default function HomePage() {
 								<CardContent className="space-y-6">
 									<div className="flex items-center gap-4 ">
 										<div className="border rounded-md p-2">
-											<Wine className="size-9 text-green-600" />
+											<Wine className="size-9 text-primary" />
 										</div>
 										<div>
-											<h4 className="mb-2 font-semibold text-green-600">
-												Vidro
-											</h4>
+											<h4 className="mb-2 font-semibold text-primary">Vidro</h4>
 											<p className="text-sm text-muted-foreground leading-relaxed">
 												Garrafas e vidro quebrado (colocar em caixa e sinalizar)
 											</p>
 										</div>
 									</div>
 									<Separator />
-									<div>
-										<h4 className="mb-2 font-semibold text-primary">
-											Plástico
-										</h4>
-										<p className="text-sm text-muted-foreground leading-relaxed">
-											Garrafas PET, embalagens de produtos de limpeza, sacolas
-											plásticas
-										</p>
+									<div className="flex items-center gap-4 ">
+										<div className="border rounded-md p-2">
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="24"
+												height="24"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												className="lucide lucide-bottle-wine-icon lucide-bottle-wine size-9 text-primary"
+											>
+												<path d="M10 3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a6 6 0 0 0 1.2 3.6l.6.8A6 6 0 0 1 17 13v8a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-8a6 6 0 0 1 1.2-3.6l.6-.8A6 6 0 0 0 10 5z" />
+												<path d="M17 13h-4a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h4" />
+											</svg>
+										</div>
+										<div>
+											<h4 className="mb-2 font-semibold text-primary">
+												Plástico
+											</h4>
+											<p className="text-sm text-muted-foreground leading-relaxed">
+												Garrafas PET, embalagens de produtos de limpeza, sacolas
+												plásticas
+											</p>
+										</div>
 									</div>
 									<Separator />
-									<div>
-										<h4 className="mb-2 font-semibold text-primary">Metal</h4>
-										<p className="text-sm text-muted-foreground leading-relaxed">
-											Latinhas de refrigerante e cerveja, latas de leite,
-											panelas, ferro
-										</p>
+									<div className="flex items-center gap-4 ">
+										<div className="border rounded-md p-2">
+											<Utensils className="size-9 text-primary" />
+										</div>
+										<div>
+											<h4 className="mb-2 font-semibold text-primary">Metal</h4>
+											<p className="text-sm text-muted-foreground leading-relaxed">
+												Latinhas de refrigerante e cerveja, latas de leite,
+												panelas, ferro
+											</p>
+										</div>
 									</div>
 									<Separator />
-									<div>
-										<h4 className="mb-2 font-semibold text-primary">
-											Papel e Papelão
-										</h4>
-										<p className="text-sm text-muted-foreground leading-relaxed">
-											Livros, cadernos, caixas de papelão, jornais, revistas
-										</p>
+									<div className="flex items-center gap-4 ">
+										<div className="border rounded-md p-2">
+											<NotebookText className="size-9 text-primary" />
+										</div>
+										<div>
+											<h4 className="mb-2 font-semibold text-primary">
+												Papel e Papelão
+											</h4>
+											<p className="text-sm text-muted-foreground leading-relaxed">
+												Livros, cadernos, caixas de papelão, jornais, revistas
+											</p>
+										</div>
 									</div>
 									<Separator />
-									<div>
-										<h4 className="mb-2 font-semibold text-primary">Outros</h4>
-										<p className="text-sm text-muted-foreground leading-relaxed">
-											Eletrônicos e óleo de cozinha usado (em recipiente
-											fechado)
-										</p>
+									<div className="flex items-center gap-4 ">
+										<div className="border rounded-md p-2">
+											<Smartphone className="size-9 text-primary" />
+										</div>
+										<div>
+											<h4 className="mb-2 font-semibold text-primary">
+												Outros
+											</h4>
+											<p className="text-sm text-muted-foreground leading-relaxed">
+												Eletrônicos e óleo de cozinha usado (em recipiente
+												fechado)
+											</p>
+										</div>
 									</div>
 								</CardContent>
 							</Card>
@@ -344,80 +297,105 @@ export default function HomePage() {
 									</CardDescription>
 								</CardHeader>
 								<CardContent className="space-y-6">
-									<div>
-										<h4 className="mb-2 font-semibold text-destructive">
-											Restos de Comida
-										</h4>
-										<p className="text-sm text-muted-foreground leading-relaxed">
-											Contaminam outros materiais e atraem insetos
-										</p>
+									<div className="flex items-center gap-4 ">
+										<div className="border rounded-md p-2">
+											<Pizza className="size-9 text-destructive" />
+										</div>
+										<div>
+											<h4 className="mb-2 font-semibold text-destructive">
+												Restos de Comida
+											</h4>
+											<p className="text-sm text-muted-foreground leading-relaxed">
+												Contaminam outros materiais e atraem insetos
+											</p>
+										</div>
 									</div>
 									<Separator />
-									<div>
-										<h4 className="mb-2 font-semibold text-destructive">
-											Resíduos de Banheiro
-										</h4>
-										<p className="text-sm text-muted-foreground leading-relaxed">
-											Papel higiênico usado, fraldas descartáveis (bebê/adulto)
-										</p>
+									<div className="flex items-center gap-4 ">
+										<div className="border rounded-md p-2">
+											<Scroll className="size-9 text-destructive" />
+										</div>
+										<div>
+											<h4 className="mb-2 font-semibold text-destructive">
+												Resíduos de Banheiro
+											</h4>
+											<p className="text-sm text-muted-foreground leading-relaxed">
+												Papel higiênico usado, fraldas descartáveis
+												(bebê/adulto)
+											</p>
+										</div>
 									</div>
 									<Separator />
-									<div>
-										<h4 className="mb-2 font-semibold text-destructive">
-											Materiais Hospitalares
-										</h4>
-										<p className="text-sm text-muted-foreground leading-relaxed">
-											Seringas e agulhas são muito perigosas para os
-											trabalhadores
-										</p>
+									<div className="flex items-center gap-4 ">
+										<div className="border rounded-md p-2">
+											<Syringe className="size-9 text-destructive" />
+										</div>
+										<div>
+											<h4 className="mb-2 font-semibold text-destructive">
+												Materiais Hospitalares
+											</h4>
+											<p className="text-sm text-muted-foreground leading-relaxed">
+												Seringas e agulhas são muito perigosas para os
+												trabalhadores
+											</p>
+										</div>
 									</div>
 									<Separator />
-									<div>
-										<h4 className="mb-2 font-semibold text-destructive">
-											Lâmpadas e Pilhas
-										</h4>
-										<p className="text-sm text-muted-foreground leading-relaxed">
-											Necessitam de descarte especial em pontos específicos
-										</p>
+									<div className="flex items-center gap-4 ">
+										<div className="border rounded-md p-2">
+											<Lightbulb className="size-9 text-destructive" />
+										</div>
+										<div>
+											<h4 className="mb-2 font-semibold text-destructive">
+												Lâmpadas e Pilhas
+											</h4>
+											<p className="text-sm text-muted-foreground leading-relaxed">
+												Necessitam de descarte especial em pontos específicos
+											</p>
+										</div>
 									</div>
 									<Separator />
-									<div>
-										<h4 className="mb-2 font-semibold text-destructive">
-											Fezes de Animais
-										</h4>
-										<p className="text-sm text-muted-foreground leading-relaxed">
-											Contaminam os materiais recicláveis
-										</p>
+									<div className="flex items-center gap-4 ">
+										<div className="border rounded-md p-2">
+											<Dog className="size-9 text-destructive" />
+										</div>
+										<div>
+											<h4 className="mb-2 font-semibold text-destructive">
+												Fezes de Animais
+											</h4>
+											<p className="text-sm text-muted-foreground leading-relaxed">
+												Contaminam os materiais recicláveis
+											</p>
+										</div>
 									</div>
 								</CardContent>
 							</Card>
 						</div>
 
-						{/* Tips */}
-						<Card className="mt-8 border-accent/20 bg-accent/5">
+						<Card className="mt-8 border-yellow-300  bg-white">
 							<CardHeader>
 								<div className="flex items-center gap-2">
-									<Lightbulb className="h-6 w-6 text-accent" />
+									<Lightbulb className="h-6 w-6 text-yellow-600" />
 									<CardTitle className="text-xl">Dicas Importantes</CardTitle>
 								</div>
 							</CardHeader>
 							<CardContent className="space-y-3">
 								<div className="flex items-start gap-3">
-									<CheckCircle2 className="h-5 w-5 mt-0.5 text-accent" />
+									<CheckCircle2 className="h-5 w-5 mt-0.5 text-green-600" />
 									<p className="text-sm leading-relaxed">
 										<strong>Lave levemente</strong> garrafas e embalagens para
 										evitar atrair insetos ou contaminar outros materiais
 									</p>
 								</div>
 								<div className="flex items-start gap-3">
-									<CheckCircle2 className="h-5 w-5 mt-0.5 text-accent" />
+									<CheckCircle2 className="h-5 w-5 mt-0.5 text-green-600" />
 									<p className="text-sm leading-relaxed">
 										<strong>Separe o vidro quebrado</strong> em uma caixa e
 										sinalize claramente para proteger os catadores
 									</p>
 								</div>
 								<div className="flex items-start gap-3">
-									<CheckCircle2 className="h-5 w-5 mt-0.5 text-accent" />
+									<CheckCircle2 className="h-5 w-5 mt-0.5 text-green-600" />
 									<p className="text-sm leading-relaxed">
 										<strong>Mantenha separado</strong> o lixo reciclável do lixo
 										orgânico desde o início
@@ -429,18 +407,17 @@ export default function HomePage() {
 				</section>
 
 				<section
-					id="historias"
+					id="pontos-de-coleta"
 					className="py-20 px-8"
 				>
 					<div className="">
 						<div className="mx-auto max-w-3xl text-center">
 							<h2 className="mb-6 text-primary text-3xl font-bold tracking-tight md:text-4xl">
-								Histórias de Transformação
+								Pontos de Coleta
 							</h2>
 							<p className="mb-12 text-pretty text-muted-foreground leading-relaxed">
-								Conheça as histórias inspiradoras de pessoas que encontraram
-								dignidade, renda e uma nova perspectiva de vida através da
-								Recicla Capixaba.
+								Acesse os principais pontos de coleta da região através dos
+								links abaixo e nos ajude a cuidar do meio ambiente.
 							</p>
 						</div>
 
@@ -448,107 +425,77 @@ export default function HomePage() {
 							<Card className="border-border">
 								<CardHeader>
 									<div className="mb-4 aspect-video overflow-hidden rounded-lg bg-muted">
-										<img
-											src="/happy-recycling-worker-portrait.jpg"
-											alt="Marialva"
-											className="h-full w-full object-cover"
+										<iframe
+											src="https://ecopontos.vilavelha.es.gov.br/"
+											className="h-full w-full object-contain object-top border p-2"
+											loading="lazy"
 										/>
 									</div>
-									<CardTitle>Marialva - Fundadora</CardTitle>
-									<CardDescription>
-										Presidente da Recicla Capixaba
-									</CardDescription>
+									<CardTitle>Vila Velha</CardTitle>
+									<CardDescription>Ecopontos Vila Velha</CardDescription>
 								</CardHeader>
 								<CardContent>
-									<p className="text-sm text-muted-foreground leading-relaxed">
-										"Fundamos a Recicla para dar oportunidade a quem sofre
-										discriminação. Hoje, 16 famílias têm dignidade, renda fixa e
-										até conseguem se aposentar. Ser catador é uma honra - somos
-										guardiões do meio ambiente."
-									</p>
+									<a
+										href="https://ecopontos.vilavelha.es.gov.br/"
+										target="_blank"
+										className="hover:bg-primary hover:text-white transition-colors flex items-center justify-center gap-2 border py-3 rounded-md text-lg text-primary"
+									>
+										Acesse
+										<ExternalLink />
+									</a>
 								</CardContent>
 							</Card>
 
 							<Card className="border-border">
 								<CardHeader>
 									<div className="mb-4 aspect-video overflow-hidden rounded-lg bg-muted">
-										<img
-											src="/male-recycling-worker-with-truck.jpg"
-											alt="Zé Carlos"
-											className="h-full w-full object-cover"
-										/>
+										<iframe
+											src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7483.586701973068!2d-40.312828!3d-20.308819!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb83d74c8faf57b%3A0xb2adcb751ae4fd75!2sRECICLA%20CAPIXABA!5e0!3m2!1spt-BR!2sbr!4v1762733371927!5m2!1spt-BR!2sbr"
+											className="h-full w-full object-contain object-top border p-2"
+											allowFullScreen
+											loading="lazy"
+										></iframe>
 									</div>
-									<CardTitle>Zé Carlos - Fundador</CardTitle>
-									<CardDescription>
-										Cofundador da Recicla Capixaba
-									</CardDescription>
+									<CardTitle>Vitória</CardTitle>
+									<CardDescription>Centro Recicla Capixaba</CardDescription>
 								</CardHeader>
 								<CardContent>
-									<p className="text-sm text-muted-foreground leading-relaxed">
-										"Comecei como catador por necessidade após ficar
-										desempregado. Hoje temos caminhão próprio, pagamos INSS
-										completo e mostramos que o trabalho de catador merece
-										respeito e reconhecimento."
-									</p>
+									<a
+										href="https://maps.app.goo.gl/Y55rDjoND7CHXpHD6"
+										target="_blank"
+										className="hover:bg-primary hover:text-white transition-colors flex items-center justify-center gap-2 border py-3 rounded-md text-lg text-primary"
+									>
+										Acesse
+										<ExternalLink />
+									</a>
 								</CardContent>
 							</Card>
 
 							<Card className="border-border">
 								<CardHeader>
 									<div className="mb-4 aspect-video overflow-hidden rounded-lg bg-muted">
-										<img
-											src="/group-of-recycling-workers-celebrating.jpg"
-											alt="Associados"
-											className="h-full w-full object-cover"
-										/>
+										<iframe
+											src="https://www.serra.es.gov.br/site/pagina/coleta-seletiva"
+											className="h-full w-full object-contain object-top border p-2"
+											allowFullScreen
+											loading="lazy"
+										></iframe>
 									</div>
-									<CardTitle>Associados</CardTitle>
-									<CardDescription>16 Famílias Transformadas</CardDescription>
+									<CardTitle>Serra</CardTitle>
+									<CardDescription>Coleta Seletiva Serra</CardDescription>
 								</CardHeader>
 								<CardContent>
-									<p className="text-sm text-muted-foreground leading-relaxed">
-										"Através da orientação financeira e do trabalho na Recicla,
-										conseguimos guardar dinheiro, conquistar estabilidade e
-										construir um futuro melhor para nossas famílias."
-									</p>
+									<a
+										href="https://www.serra.es.gov.br/site/pagina/coleta-seletiva"
+										target="_blank"
+										className="hover:bg-primary hover:text-white transition-colors flex items-center justify-center gap-2 border py-3 rounded-md text-lg text-primary"
+									>
+										Acesse
+										<ExternalLink />
+									</a>
 								</CardContent>
 							</Card>
 						</div>
-
-						<Card className="mt-12 border-primary/20 bg-primary/5">
-							<CardHeader>
-								<div className="flex items-center gap-2">
-									<Award className="h-6 w-6 text-primary" />
-									<CardTitle className="text-xl">
-										Nosso Modelo de Trabalho
-									</CardTitle>
-								</div>
-							</CardHeader>
-							<CardContent className="space-y-4">
-								<div className="grid gap-4 md:grid-cols-2">
-									<div className="space-y-2">
-										<h4 className="font-semibold text-primary">
-											Rotina Diária
-										</h4>
-										<p className="text-sm text-muted-foreground leading-relaxed">
-											Os associados chegam pela manhã, tomam café juntos e
-											iniciam a triagem às 8h. Parte da equipe faz coleta
-											externa em condomínios e parceiros.
-										</p>
-									</div>
-									<div className="space-y-2">
-										<h4 className="font-semibold text-primary">
-											Volume de Coleta
-										</h4>
-										<p className="text-sm text-muted-foreground leading-relaxed">
-											Coletamos 15-20 toneladas por mês através de nossa coleta
-											própria, mais 50-60 toneladas vindas da parceria com a
-											Prefeitura de Vitória.
-										</p>
-									</div>
-								</div>
-							</CardContent>
-						</Card>
 					</div>
 				</section>
 
@@ -559,13 +506,7 @@ export default function HomePage() {
 				>
 					<div className="">
 						<div className="mx-auto max-w-3xl text-center">
-							<Badge
-								className="mb-4"
-								variant="outline"
-							>
-								Reconhecimento
-							</Badge>
-							<h2 className="mb-6 text-balance text-3xl font-bold tracking-tight md:text-4xl">
+							<h2 className="mb-6 text-balance text-primary text-3xl font-bold tracking-tight md:text-4xl">
 								A Importância dos Catadores
 							</h2>
 							<p className="mb-12 text-pretty text-muted-foreground leading-relaxed">
@@ -628,7 +569,7 @@ export default function HomePage() {
 							</div>
 
 							<div className="space-y-6">
-								<Card className="border-accent/20 bg-accent/5">
+								<Card className="border-border">
 									<CardHeader>
 										<CardTitle className="text-2xl">
 											O Que a Sociedade Pode Fazer
@@ -636,8 +577,8 @@ export default function HomePage() {
 									</CardHeader>
 									<CardContent className="space-y-4">
 										<div className="flex items-start gap-3">
-											<div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/20">
-												<span className="text-sm font-bold text-accent">1</span>
+											<div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary">
+												<span className="text-sm font-bold text-white">1</span>
 											</div>
 											<div>
 												<h4 className="mb-1 font-semibold">
@@ -651,8 +592,8 @@ export default function HomePage() {
 										</div>
 
 										<div className="flex items-start gap-3">
-											<div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/20">
-												<span className="text-sm font-bold text-accent">2</span>
+											<div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary">
+												<span className="text-sm font-bold text-white">2</span>
 											</div>
 											<div>
 												<h4 className="mb-1 font-semibold">
@@ -666,8 +607,8 @@ export default function HomePage() {
 										</div>
 
 										<div className="flex items-start gap-3">
-											<div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/20">
-												<span className="text-sm font-bold text-accent">3</span>
+											<div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary">
+												<span className="text-sm font-bold text-white">3</span>
 											</div>
 											<div>
 												<h4 className="mb-1 font-semibold">Divulgar a Causa</h4>
@@ -679,8 +620,8 @@ export default function HomePage() {
 										</div>
 
 										<div className="flex items-start gap-3">
-											<div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/20">
-												<span className="text-sm font-bold text-accent">4</span>
+											<div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary">
+												<span className="text-sm font-bold text-white">4</span>
 											</div>
 											<div>
 												<h4 className="mb-1 font-semibold">
@@ -717,38 +658,31 @@ export default function HomePage() {
 					</div>
 				</section>
 
-				{/* CTA Section */}
 				<section
 					id="contato"
-					className="bg-primary py-20 text-primary-foreground"
+					className="relative bg-primary py-20 text-primary-foreground overflow-hidden px-8"
 				>
-					<div className="">
-						<div className="mx-auto max-w-2xl text-center">
-							<h2 className="mb-6 text-balance text-3xl font-bold tracking-tight md:text-4xl">
-								Faça Parte Dessa Transformação
-							</h2>
-							<p className="mb-8 text-pretty text-lg text-primary-foreground/90 leading-relaxed">
-								Sua colaboração faz a diferença. Entre em contato para saber
-								como você pode apoiar a Recicla Capixaba e contribuir para um
-								futuro mais sustentável.
-							</p>
-							<div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-								<Button
-									size="lg"
-									className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
-								>
-									Entre em Contato
-								</Button>
-								<Button
-									size="lg"
-									variant="outline"
-									className="border-primary-foreground/20 bg-transparent text-primary-foreground hover:bg-primary-foreground/10"
-								>
-									Saiba Mais
-								</Button>
-							</div>
+					<div className="mx-auto max-w-2xl text-center relative z-20">
+						<h2 className="mb-6 text-balance text-3xl font-bold tracking-tight md:text-4xl">
+							Faça Parte Dessa Transformação
+						</h2>
+						<p className="mb-8 text-pretty text-lg text-primary-foreground/90 leading-relaxed">
+							Sua colaboração faz a diferença. Entre em contato para saber como
+							você pode apoiar a Recicla Capixaba e contribuir para um futuro
+							mais sustentável.
+						</p>
+
+						<div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+							<a
+								href="https://destineaqui.com/detalhes/recicla-capixaba"
+								target="_blank"
+								className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 px-3 py-2 rounded-md cursor-pointer"
+							>
+								Entre em Contato e Saiba Mais
+							</a>
 						</div>
 					</div>
+					<div className="absolute inset-0 z-0 bg-[url('/recycling-workers-sorting-materials.jpg')] bg-cover bg-center opacity-10" />
 				</section>
 			</main>
 

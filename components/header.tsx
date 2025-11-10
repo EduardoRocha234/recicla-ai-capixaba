@@ -9,8 +9,8 @@ export function Header() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
 	return (
-		<header className="sticky top-2 z-50 w-full  px-8 ">
-			<div className="flex h-16 items-center justify-between border px-4 rounded-xl backdrop-blur bg-background/95 supports-backdrop-filter:bg-background/60">
+		<header className="sticky top-2 z-50 w-full bg-transparent px-8">
+			<div className="sticky top-2 z-50 flex h-16 items-center justify-between border px-4 rounded-xl backdrop-blur bg-background/95 supports-backdrop-filter:bg-background/60">
 				<Link
 					href="/"
 					className="flex items-center gap-2"
@@ -19,7 +19,7 @@ export function Header() {
 						src="/recicla_ai_capixaba_logo.png"
 						className="object-cover size-11 rounded-full object-center"
 					/>
-					<span className="text-xl font-bold text-primary">
+					<span className="text-md lg:text-xl font-bold text-primary">
 						Recicla Ai, Capixaba!
 					</span>
 				</Link>
@@ -39,10 +39,10 @@ export function Header() {
 						Como Reciclar
 					</Link>
 					<Link
-						href="/#historias"
+						href="/#pontos-de-coleta"
 						className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
 					>
-						Pontos de coleta
+						Pontos de Coleta
 					</Link>
 					<Link
 						href="/#catadores"
@@ -60,7 +60,7 @@ export function Header() {
 
 				{/* Mobile Menu Button */}
 				<button
-					className="md:hidden"
+					className="md:hidden transition-all"
 					onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
 					aria-label="Toggle menu"
 				>
@@ -74,7 +74,7 @@ export function Header() {
 
 			{/* Mobile Navigation */}
 			{mobileMenuOpen && (
-				<div className="border-t border-border bg-background md:hidden">
+				<div className="border border-border mt-2 rounded-xl px-4 bg-background md:hidden transition-all transition-discrete">
 					<nav className="container flex flex-col gap-4 py-4">
 						<Link
 							href="/#sobre"
